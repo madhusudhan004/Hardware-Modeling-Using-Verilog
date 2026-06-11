@@ -1,0 +1,9 @@
+read_verilog halfadder.v
+hierarchy -check -top half_adder
+proc
+opt
+synth -top half_adder
+abc -g gates
+stat
+write_verilog halfadder_netlist.v
+show -format jpeg -prefix half_adder_diagram
