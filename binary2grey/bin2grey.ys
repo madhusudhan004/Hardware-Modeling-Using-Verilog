@@ -1,0 +1,11 @@
+read_verilog bin2grey.v
+hierarchy -check -top bin2grey
+proc
+opt
+synth -top bin2grey
+abc -g gates
+stat -tech cmos
+memory
+write_verilog bin2greynetlist.v
+show -colors 2
+show -format png -prefix bin2greydiagram -colors 2
