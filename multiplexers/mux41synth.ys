@@ -1,0 +1,10 @@
+read_verilog m2u1x.v
+read_verilog mux_41.v
+hierarchy -check -top mux41
+proc
+opt
+synth -top mux41
+stat
+stat -tech cmos
+abc -g cmos
+show -format png -prefix mux41diagram -colors 2 mux41

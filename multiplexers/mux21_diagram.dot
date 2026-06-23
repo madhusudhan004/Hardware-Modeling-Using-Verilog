@@ -1,0 +1,17 @@
+digraph "mux21" {
+label="mux21";
+rankdir="LR";
+remincross=true;
+n1 [ shape=octagon, label="in", color="black", fontcolor="black"];
+n2 [ shape=octagon, label="out", color="black", fontcolor="black"];
+n3 [ shape=octagon, label="sel", color="black", fontcolor="black"];
+c8 [ shape=record, label="{{<p4> A|<p5> B|<p6> S}|$81\n$_MUX_|{<p7> Y}}",  ];
+x0 [ shape=record, style=rounded, label="<s0> 0:0 - 0:0 ", color="black", fontcolor="black" ];
+x0:e -> c8:p4:w [arrowhead=odiamond, arrowtail=odiamond, dir=both, color="black", fontcolor="black", label=""];
+x1 [ shape=record, style=rounded, label="<s0> 1:1 - 0:0 ", color="black", fontcolor="black" ];
+x1:e -> c8:p5:w [arrowhead=odiamond, arrowtail=odiamond, dir=both, color="black", fontcolor="black", label=""];
+n1:e -> x0:s0:w [color="black", fontcolor="black", label=""];
+n1:e -> x1:s0:w [color="black", fontcolor="black", label=""];
+c8:p7:e -> n2:w [color="black", fontcolor="black", label=""];
+n3:e -> c8:p6:w [color="black", fontcolor="black", label=""];
+}

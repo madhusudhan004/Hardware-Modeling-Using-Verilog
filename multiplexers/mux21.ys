@@ -1,0 +1,8 @@
+read_verilog m2u1x.v
+hierarchy -check -top mux21
+proc
+opt 
+synth -top mux21
+stat
+write_verilog mux21netlist.v
+show -format png -prefix mux21_diagram
