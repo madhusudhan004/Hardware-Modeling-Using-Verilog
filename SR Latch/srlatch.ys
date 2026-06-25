@@ -1,0 +1,8 @@
+read_verilog sr_latch.v
+hierarchy -check -top sr_latch
+proc
+synth -top sr_latch
+opt -full
+stat -tech cmos
+abc -g gates
+show -format jpg -prefix sr_latchrtl -colors 2

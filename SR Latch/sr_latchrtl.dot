@@ -1,0 +1,31 @@
+digraph "sr_latch" {
+label="sr_latch";
+rankdir="LR";
+remincross=true;
+n7 [ shape=octagon, label="qbar", color="black", fontcolor="black"];
+n8 [ shape=octagon, label="q", color="black", fontcolor="black"];
+n9 [ shape=octagon, label="r", color="black", fontcolor="black"];
+n10 [ shape=octagon, label="s", color="black", fontcolor="black"];
+c14 [ shape=record, label="{{<p11> A|<p12> B}|$86\n$_NOR_|{<p13> Y}}",  ];
+c15 [ shape=record, label="{{<p11> A|<p12> B}|$87\n$_NOR_|{<p13> Y}}",  ];
+x0 [shape=point, ];
+x1 [shape=point, ];
+x2 [shape=point, ];
+x3 [shape=point, ];
+x4 [shape=point, ];
+x5 [shape=point, ];
+x1:e -> c14:p11:w [colorscheme="dark28", color="8", fontcolor="8", label=""];
+n10:e -> x1:w [colorscheme="dark28", color="4", fontcolor="4", label=""];
+x4:e -> c15:p11:w [colorscheme="dark28", color="6", fontcolor="6", label=""];
+x5:e -> c14:p12:w [colorscheme="dark28", color="5", fontcolor="5", label=""];
+c15:p13:e -> x2:w [colorscheme="dark28", color="2", fontcolor="2", label=""];
+n5 [ shape=point ];
+c14:p13:e -> n5:w [colorscheme="dark28", color="8", fontcolor="8", label=""];
+n5:e -> c15:p12:w [colorscheme="dark28", color="8", fontcolor="8", label=""];
+n5:e -> x3:w [colorscheme="dark28", color="8", fontcolor="8", label=""];
+x0:e -> x5:w [colorscheme="dark28", color="3", fontcolor="3", label=""];
+x3:e -> n7:w [colorscheme="dark28", color="1", fontcolor="1", label=""];
+x2:e -> n8:w [colorscheme="dark28", color="8", fontcolor="8", label=""];
+n8:e -> x0:w [colorscheme="dark28", color="8", fontcolor="8", label=""];
+n9:e -> x4:w [colorscheme="dark28", color="2", fontcolor="2", label=""];
+}
