@@ -1,0 +1,8 @@
+read_verilog comp1s.v
+hierarchy -check -top comp1s
+proc
+opt
+synth -top comp1s
+stat -tech cmos
+abc -g gates
+show -format jpg -prefix comp1srtl colors 2 comp1s

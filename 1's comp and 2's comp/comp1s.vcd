@@ -1,0 +1,61 @@
+$date
+	Sun Jun 28 14:50:15 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module comp1stb $end
+$var wire 4 ! d [3:0] $end
+$var wire 1 " carry $end
+$var reg 4 # a [3:0] $end
+$var reg 4 $ b [3:0] $end
+$scope module DUT $end
+$var wire 4 % a [3:0] $end
+$var wire 4 & b [3:0] $end
+$var reg 1 " carry $end
+$var reg 4 ' d [3:0] $end
+$var reg 5 ( temp [4:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b10011 (
+b100 '
+b1001 &
+b1101 %
+b1001 $
+b1101 #
+1"
+b100 !
+$end
+#10
+0"
+b1011 (
+b1101 $
+b1101 &
+b1001 #
+b1001 %
+#20
+b110 !
+b110 '
+1"
+b10101 (
+b111 $
+b111 &
+b1101 #
+b1101 %
+#30
+0"
+b1001 (
+b1101 $
+b1101 &
+b111 #
+b111 %
+#55
