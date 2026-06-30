@@ -1,0 +1,62 @@
+$date
+	Tue Jun 30 20:45:17 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module nandhalfaddertb $end
+$var wire 1 ! sum $end
+$var wire 1 " carry $end
+$var reg 1 # a $end
+$var reg 1 $ b $end
+$scope module DUT $end
+$var wire 1 # a $end
+$var wire 1 $ b $end
+$var wire 1 " carry $end
+$var wire 1 % n11 $end
+$var wire 1 & n12 $end
+$var wire 1 ' n13 $end
+$var wire 1 ( n14 $end
+$var wire 1 ) n2 $end
+$var wire 1 ! sum $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+1)
+1(
+1'
+1&
+1%
+0$
+0#
+0"
+0!
+$end
+#5
+1!
+0&
+0'
+1$
+#10
+0(
+1!
+1&
+1'
+0%
+0$
+1#
+#15
+0!
+1"
+1(
+0)
+0&
+1$

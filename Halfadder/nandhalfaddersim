@@ -1,0 +1,69 @@
+#! 
+:ivl_version "14.0 (devel)" "(s20260301-174-gc7530dbcc-dirty)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "C:\OSS-CA~1\lib\ivl\system.vpi";
+:vpi_module "C:\OSS-CA~1\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\OSS-CA~1\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\OSS-CA~1\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\OSS-CA~1\lib\ivl\va_math.vpi";
+S_00000296c8889310 .scope module, "nandhalfaddertb" "nandhalfaddertb" 2 1;
+ .timescale 0 0;
+v00000296c87deba0_0 .var "a", 0 0;
+v00000296c87dee20_0 .var "b", 0 0;
+v00000296c87df1e0_0 .net "carry", 0 0, L_00000296c87dfb30;  1 drivers
+v00000296c87df280_0 .net "sum", 0 0, L_00000296c87dfba0;  1 drivers
+S_00000296c888e630 .scope module, "DUT" "nandhalfadder" 2 4, 3 1 0, S_00000296c8889310;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /INPUT 1 "b";
+    .port_info 2 /OUTPUT 1 "sum";
+    .port_info 3 /OUTPUT 1 "carry";
+L_00000296c888c2a0 .functor NAND 1, v00000296c87deba0_0, v00000296c87dee20_0, C4<1>, C4<1>;
+L_00000296c87dfb30 .functor NAND 1, L_00000296c888c2a0, L_00000296c888c2a0, C4<1>, C4<1>;
+L_00000296c87dfd60 .functor NAND 1, v00000296c87deba0_0, v00000296c87deba0_0, C4<1>, C4<1>;
+L_00000296c87df9e0 .functor NAND 1, v00000296c87dee20_0, v00000296c87dee20_0, C4<1>, C4<1>;
+L_00000296c87dfc10 .functor NAND 1, v00000296c87dee20_0, L_00000296c87dfd60, C4<1>, C4<1>;
+L_00000296c87dfeb0 .functor NAND 1, v00000296c87deba0_0, L_00000296c87df9e0, C4<1>, C4<1>;
+L_00000296c87dfba0 .functor NAND 1, L_00000296c87dfc10, L_00000296c87dfeb0, C4<1>, C4<1>;
+v00000296c88894a0_0 .net "a", 0 0, v00000296c87deba0_0;  1 drivers
+v00000296c88875c0_0 .net "b", 0 0, v00000296c87dee20_0;  1 drivers
+v00000296c888e7c0_0 .net "carry", 0 0, L_00000296c87dfb30;  alias, 1 drivers
+v00000296c888e860_0 .net "n11", 0 0, L_00000296c87dfd60;  1 drivers
+v00000296c888e900_0 .net "n12", 0 0, L_00000296c87df9e0;  1 drivers
+v00000296c888e9a0_0 .net "n13", 0 0, L_00000296c87dfc10;  1 drivers
+v00000296c888ea40_0 .net "n14", 0 0, L_00000296c87dfeb0;  1 drivers
+v00000296c87deb00_0 .net "n2", 0 0, L_00000296c888c2a0;  1 drivers
+v00000296c87dea60_0 .net "sum", 0 0, L_00000296c87dfba0;  alias, 1 drivers
+    .scope S_00000296c8889310;
+T_0 ;
+    %vpi_call 2 7 "$dumpfile", "nandhalfadder.vcd" {0 0 0};
+    %vpi_call 2 8 "$dumpvars", 32'sb00000000000000000000000000000000, S_00000296c8889310 {0 0 0};
+    %vpi_call 2 9 "$monitor", "%0t,A=%b,B=%b,Sum=%b,Carry=%b", $time, v00000296c87deba0_0, v00000296c87dee20_0, v00000296c87df280_0, v00000296c87df1e0_0 {0 0 0};
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000296c87deba0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000296c87dee20_0, 0, 1;
+    %delay 5, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000296c87deba0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000296c87dee20_0, 0, 1;
+    %delay 5, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000296c87deba0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000296c87dee20_0, 0, 1;
+    %delay 5, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000296c87deba0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000296c87dee20_0, 0, 1;
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "nandhalfaddertb.v";
+    "nandhalfadder.v";
