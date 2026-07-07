@@ -1,0 +1,9 @@
+read_verilog carrylookadder.v
+hierarchy -check -top carrylookadder
+proc
+opt
+synth -top carrylookadder
+write_verilog carrylookaddernetlist.v
+abc -g gates
+stat -tech cmos
+show -format jpeg -prefix carrylookadderrtl -colors 2
