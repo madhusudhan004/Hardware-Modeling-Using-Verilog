@@ -1,0 +1,78 @@
+$date
+	Thu Jul 09 12:22:47 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module gatedsrlatchtb $end
+$var wire 1 ! qbar $end
+$var wire 1 " q $end
+$var reg 1 # c $end
+$var reg 1 $ r $end
+$var reg 1 % s $end
+$scope module DUT $end
+$var wire 1 # c $end
+$var wire 1 " q $end
+$var wire 1 ! qbar $end
+$var wire 1 $ r $end
+$var wire 1 & rcomp $end
+$var wire 1 % s $end
+$var wire 1 ' scomp $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+1'
+1&
+x%
+x$
+0#
+x"
+x!
+$end
+#5
+0$
+0%
+#10
+1#
+#15
+0"
+1!
+0&
+1$
+#20
+0!
+1"
+1&
+0'
+0$
+1%
+#25
+1'
+0%
+#30
+0#
+#35
+1#
+#40
+1!
+0&
+0'
+1$
+1%
+#45
+0"
+1&
+1'
+0$
+0%
+#50
+0#
+#70

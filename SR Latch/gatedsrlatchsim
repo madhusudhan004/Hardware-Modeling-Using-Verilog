@@ -1,0 +1,93 @@
+#! 
+:ivl_version "14.0 (devel)" "(s20260301-174-gc7530dbcc-dirty)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "C:\OSS-CA~1\lib\ivl\system.vpi";
+:vpi_module "C:\OSS-CA~1\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\OSS-CA~1\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\OSS-CA~1\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\OSS-CA~1\lib\ivl\va_math.vpi";
+S_000002c6444dbe00 .scope module, "gatedsrlatchtb" "gatedsrlatchtb" 2 1;
+ .timescale 0 0;
+v000002c6444d7360_0 .var "c", 0 0;
+v000002c6444d7400_0 .net "q", 0 0, L_000002c6444d8920;  1 drivers
+v000002c644656ec0_0 .net "qbar", 0 0, L_000002c6444d8ae0;  1 drivers
+v000002c644656ce0_0 .var "r", 0 0;
+v000002c6446562e0_0 .var "s", 0 0;
+S_000002c6444d9e00 .scope module, "DUT" "gatedsrlatch" 2 4, 3 1 0, S_000002c6444dbe00;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "s";
+    .port_info 1 /INPUT 1 "r";
+    .port_info 2 /INPUT 1 "c";
+    .port_info 3 /OUTPUT 1 "q";
+    .port_info 4 /OUTPUT 1 "qbar";
+L_000002c6444d8530 .functor NAND 1, v000002c6446562e0_0, v000002c6444d7360_0, C4<1>, C4<1>;
+L_000002c6444d87d0 .functor NAND 1, v000002c644656ce0_0, v000002c6444d7360_0, C4<1>, C4<1>;
+L_000002c6444d8920 .functor NAND 1, L_000002c6444d8530, L_000002c6444d8ae0, C4<1>, C4<1>;
+L_000002c6444d8ae0 .functor NAND 1, L_000002c6444d87d0, L_000002c6444d8920, C4<1>, C4<1>;
+v000002c6444d9f90_0 .net "c", 0 0, v000002c6444d7360_0;  1 drivers
+v000002c6444de650_0 .net "q", 0 0, L_000002c6444d8920;  alias, 1 drivers
+v000002c6444da030_0 .net "qbar", 0 0, L_000002c6444d8ae0;  alias, 1 drivers
+v000002c6444da0d0_0 .net "r", 0 0, v000002c644656ce0_0;  1 drivers
+v000002c6444d7180_0 .net "rcomp", 0 0, L_000002c6444d87d0;  1 drivers
+v000002c6444d7220_0 .net "s", 0 0, v000002c6446562e0_0;  1 drivers
+v000002c6444d72c0_0 .net "scomp", 0 0, L_000002c6444d8530;  1 drivers
+    .scope S_000002c6444dbe00;
+T_0 ;
+    %vpi_call 2 7 "$dumpfile", "gatedsrlatch.vcd" {0 0 0};
+    %vpi_call 2 8 "$dumpvars", 32'sb00000000000000000000000000000000, S_000002c6444dbe00 {0 0 0};
+    %vpi_call 2 9 "$monitor", "%0t,S=%b,R=%b,C=%b,Q=%b,Qbar=%b", $time, v000002c6446562e0_0, v000002c644656ce0_0, v000002c6444d7360_0, v000002c6444d7400_0, v000002c644656ec0_0 {0 0 0};
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000002c6444d7360_0, 0, 1;
+    %delay 5, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000002c6446562e0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000002c644656ce0_0, 0, 1;
+    %delay 5, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000002c6444d7360_0, 0, 1;
+    %delay 5, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000002c6446562e0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000002c644656ce0_0, 0, 1;
+    %delay 5, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000002c6446562e0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000002c644656ce0_0, 0, 1;
+    %delay 5, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000002c6446562e0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000002c644656ce0_0, 0, 1;
+    %delay 5, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000002c6444d7360_0, 0, 1;
+    %delay 5, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000002c6444d7360_0, 0, 1;
+    %delay 5, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000002c6446562e0_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000002c644656ce0_0, 0, 1;
+    %delay 5, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000002c6446562e0_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000002c644656ce0_0, 0, 1;
+    %delay 5, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000002c6444d7360_0, 0, 1;
+    %delay 20, 0;
+    %vpi_call 2 21 "$finish" {0 0 0};
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "gatedsrlatchtb.v";
+    "gatedsrlatch.v";
